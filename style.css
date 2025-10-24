@@ -1,0 +1,195 @@
+/** 심화 과정의 vw, vh, em 부분도 적용 하고 싶은데요. 
+초반이라 그런지 아직 반응형이 강의에는 없는거 같아서요. 뒷부분 강의에 나오나요? 아님 따로 개인적으로 따로 학습해야하는건가요? 어떻게 적용해야 할까요? */
+/* lv1 */
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'ROKAFSansBoldFont'; /* 원하는 폰트 이름 */
+  src: url('fonts/ROKAFSansBold.ttf') format('truetype'); /* 폰트 파일 경로 지정 */
+}
+
+body {
+  margin: 0;
+  background: #ffffff; 
+  color: #0b1f66;
+  font-family: Pretendard, 'ROKAFSansBoldFont', 'Abhaya Libre', 'Noto Sans KR', sans-serif;
+}
+header {
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1120px;
+    height: 70px;
+    margin: 0 auto;
+    /* padding: 0 200px;  */
+    /* gnb에서 로고 좌측, 로그인버튼 우측 200px 여백을 주라고 한부분이 이게 맞는지 모르겠네요. 이렇게 넣으면 피그마의 완성본과 요구사항의 결과물이 다른거 같아서요. 이게 맞는 건가요? 일단은 빼 두었습니다. */
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+main {
+  padding-top: 70px;
+}
+.logo {
+  display: flex;
+  flex: 0 1 auto;
+  gap: 8.59px;
+  /* align-items: flex-end; */  /* 피그마에서는 판다마켓 글자가 아래로 정렬되어있어서, 아래로 정렬했더니 판다마켓 글자가 너무 밑에 치우쳐버려서요, 일단 이 부분을 삭제하고, 하단 .logo span 에서 직접 맞췄습니다. */
+  font-family: 'ROKAFSansBoldFont';
+  font-size: 25.63px;
+  line-height: 100%;
+  color: #3692FF;
+}
+.login-btn {
+  width: 128px;
+  text-align: center;
+  padding: 12px 23px;
+  border-radius: 8px;
+  background: #3692FF;
+  color: #F3F4F6;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+.feature {
+  background:#CFE5FF;
+  width: 100%;
+  height: 540px;
+  padding-top: 200px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  width: 988px;
+  margin: 0 auto;
+  background: #fcfcfc;
+  border-radius: 12px;
+  justify-content: center;
+}
+.reverse {
+    flex-direction: row-reverse;
+ }
+.hot-item {
+  display: flex;
+  padding: 138px 0;
+}
+.search {
+  display: flex;
+  padding: 138px 0;
+}
+.register{
+  display: flex;
+  padding: 138px 0;
+}
+.banner {
+  background: #CFE5FF;
+  padding-top: 143px;
+}
+footer {
+  background: #111827;
+  padding-top: 32px
+}
+
+/* lv2 */
+.logo span {
+  position: relative;   /* 판다마켓 로고 글자부분이 피그마로 보았을때는 아래로 정렬되어있던데요, css 에서 아래로 정렬하니 너무 밑에 정렬이 되어버려서 top으로 최대한 비슷하게 맞췄습니다. */
+  top: 11px;
+}
+.container img {
+  padding: 0 64px 0 0;
+}
+.container .feature-img {
+  padding: 0;
+}
+.container .banner-img {
+  padding: 0;
+}
+.container.reverse img {
+  padding: 0 0 0 64px;
+}
+.feature .container {
+  width: 1110px;
+  background: none;
+}
+.banner .container {
+  width: 1110px;
+  background: none;
+}
+.feature .txt-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 357px;
+}
+.banner .txt-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 295px;
+}
+.txt-wrap h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  margin: 12px 0 24px;
+}
+.txt-wrap p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #374151;
+  white-space: nowrap;
+}
+.feature h2 {
+  margin: 0;
+}
+.feature .view-btn {
+  padding: 16px 124px;
+  border-radius: 40px;
+  background: #3692FF;
+  color: #F9FAFB;
+  margin: 32px 0 60px;
+}
+.txt-wrap .keyword {
+  font-family: 'Abhaya Libre';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+  color: #3692ff;
+}
+footer .wrap {
+  width: 1120px;
+  height: 128px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer .company {
+  color: #9CA3AF;
+}
+footer .footer-nav {
+  margin: 0;
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+}
+footer .footer-nav a {
+  color: #E5E7EB;
+}
+footer .footer-link {
+  margin: 0;
+  display: flex;
+  gap: 12px;
+}
+
