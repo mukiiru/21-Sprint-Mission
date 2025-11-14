@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="판다마켓"> <!-- 공유제목 -->
+    <meta property="og:url" content="https://pandamarket.com"> <!-- 공유url -->
+    <meta property="og:type" content="website"> <!-- 공유타입 -->
+    <meta property="og:description" content="일상의 모든 물건을 거래해보세요"> <!-- 공유설명 -->
+    <meta property="og:image" content="share_img@3x.png"> <!-- 공유이미지 -->    
+
+    <title>판다마켓</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="/css/pages/signup.css">
+  </head>
+  <body>
+    <main>
+      <section class="login-container">
+        <a href="/" class="logo-full"></a>
+        <form action="" method="post" class="login-form">
+          <div class="email-wrap">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" class="email" placeholder="codeit@email.com">
+          </div>
+          <div class="nickname-wrap">
+            <label for="nickname">닉네임</label>
+            <input type="nickname" id="nickname" name="nickname" class="nickname" placeholder="판다">
+          </div>
+          <div class="password-wrap">
+            <label for="password">비밀번호</label>
+            <div class="input-wrap">
+              <input type="password" id="password" name="password" class="password" placeholder="••••••••">
+              <button class="password-show" aria-label="비밀번호 보기"></button>
+              <button class="password-hide" aria-label="비밀번호 감추기"></button>
+            </div>
+          </div>
+          <div class="password-wrap">
+            <label for="password">비밀번호 확인</label>
+            <div class="input-wrap">
+              <input type="password" id="password" name="password" class="password" placeholder="••••••••">
+              <button class="password-show" aria-label="비밀번호 보기"></button>
+              <button class="password-hide" aria-label="비밀번호 감추기"></button>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">회원가입</button>
+          <div class="fast-login-wrap">
+            <span>간편 로그인하기</span>
+            <div class="link-wrap">
+              <a href="https://www.google.com/" class="google-link" target="_blank" rel="noopener noreferrer"></a>
+              <a href="https://www.kakaocorp.com/page/" class="kakao-link" target="_blank" rel="noopener noreferrer"></a>
+            </div> 
+          </div>
+          <p class="signup-wrap">
+            이미 회원이신가요?
+            <a href="/pages/login.html" class="signup-link">로그인</a>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
+
+
