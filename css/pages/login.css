@@ -1,0 +1,169 @@
+@import url("../base/_reset.css");
+@import url("../base/_font.css");
+@import url("../base/_global.css");
+
+body {
+  height: 100%;
+  font-size: 16px;
+  margin: 0;
+  background: var(--color-white); 
+  color: var(--color-text-100);
+  font-family: Pretendard, 'ROKAFSansBold', 'Abhaya Libre', 'Noto Sans KR', sans-serif;
+}
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container {
+  max-width: 640px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.logo-full {
+  background: url(/images/icon/panda_logo_full.svg) center center no-repeat;
+  width: 100%;
+  height: 132px;
+  display: block;
+  background-size: contain;
+  margin: 0 auto;
+}
+.login-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+.login-form label {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.login-form input {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  background: var(--gray-100);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 15px 20px;
+  margin: 16px 0 0;
+  color: var(--gray-800);
+  outline: white;
+}
+.input-wrap {
+  position: relative;
+}
+.input-wrap button {
+  display: none;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: calc(50% - 5px);
+  right: 24px;
+  border: none;
+}
+.error-message {
+  display: none;
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0%;
+  margin: 8px 0 0 16px;
+}
+.error-message.show {
+  display: inline-block;
+}
+.input-wrap .password-show {
+  background: url(/images/icon/eye_abled.svg) center center no-repeat;
+  display: none;
+}
+.input-wrap .password-hide {
+  background: url(/images/icon/eye_disabled.svg) center center no-repeat;
+  display: block;
+}
+.input-wrap.visible .password-show {
+  display: block;
+}
+.input-wrap.visible .password-hide {
+  display: none;
+}
+.submit-btn {
+  border: 0;
+  border-radius: 40px;
+  padding: 16px;
+  background: var(--blue-100);
+  color: var(--gray-100);
+}
+.submit-btn.disabled {
+  background: var(--gray-400);
+  color: var(--gray-100);
+}
+.fast-login-wrap {
+  border-radius: 8px;
+  padding: 16px 23px;
+  background: #E6F2FF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fast-login-wrap a {
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+}
+.fast-login-wrap .link-wrap {
+  display: flex;
+  gap: 16px;
+}
+.google-link {
+  background: url(/images/icon/google.svg) center center no-repeat;
+}
+.kakao-link {
+  background: url(/images/icon/kakao.svg) center center no-repeat;
+}
+.signup-wrap {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--gray-800);
+  text-align: center;
+}
+.signup-link {
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: underline;
+  color: var(--blue-100);
+  margin-left: 4px;
+}
+
+/* PC - 1200px 이상 */
+@media (max-width: 1920px) {}
+/* Tablet - 768px이하 */
+@media (max-width: 768px) {
+}
+/* Mobile - 375px이하 */
+@media (max-width: 375px) {
+  .login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 16px;
+  }
+  .logo-full {
+    width: 198px;
+    height: 66px;
+    background-size: contain;
+    margin: 0 auto;
+  }
+}
